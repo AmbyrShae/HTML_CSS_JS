@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- start of HTML code -->
+<html>
+<!-- contains information ABOUT the code -->
+    <head>
+      <!-- specify the character encoding for the HTML document -->
+        <meta charset="utf-8">
+        <!-- title appear at the top of the window/tab -->
+        <title>A slideshow made with HTML5, CSS3, and JavaScript</title>
+        <!-- viewport is the screen -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- link font to HTML -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+        <!-- link external CSS to HTML -->
+        <link rel="stylesheet" href="css/main_content.css">
+        <link rel="stylesheet" href="css/simple-slideshow-styles.css">
+    </head>
+    <!-- start of what will be seen in the main browswer -->
+    <body>
+        <header>
+            <h1>City of New Orleans</h1>
+            <!-- span is an inline element. Inline - remain on same line -->
+            <p><span class="desc">A simple JavaScript slideshow.</span> [<a href="https://github.com/leemark/better-simple-slideshow">GitHub<span> repo</span></a>]</p>
+        </header>
+        <!-- class name with a space means div can be called using either class -->
+        <!-- for example, we have a second slideshow called bss-slide num2
+              we can give both slideshows a similar look by using .bss-slides
+              but then we can differentiate them in some way by using .num1 or .num2 -->
+        <div class="bss-slides num1" tabindex="1" autofocus="autofocus">
+            <figure>
+		      <img src="img/ChrisLitherlandBourbonSt.jpg" width="100%" />
+            </figure>
+            <figure>
+		      <img src="img/aphoto980452.jpg" width="100%" />
+            </figure>
+            <figure>
+		      <img src="img/cafe-du-monde-beignets.jpg" width="100%" />
+            </figure>
+            <figure>
+		      <img src="img/Mardi_Gras_WebF.jpg" width="100%" />
+            </figure>
+            <figure>
+		      <img src="img/cityscape-at-night1.jpg" width="100%" />
+            </figure>
+        </div>
+<div class="content">
+<h2>History</h2>
+
+<p>Situated on a bend of the Mississippi River 100 miles from its mouth, New Orleans has
+  been the chief city of Louisiana and the Gulf of Mexico’s busiest northern port since the early 1700s.
+  Founded by the French, ruled for 40 years by the Spanish and bought by the United States in the
+  1803 Louisiana Purchase, New Orleans is known for its distinct Creole culture and vibrant history.
+  Significant battles of the War of 1812 and the Civil War were fought over the city.
+  In its last hundred years the key struggles of New Orleans have been social (poverty, racial strife) and
+  natural (hurricanes, floods and slowly sinking land).</p>
+<!-- link external Javascript to HTML -->
+<script src="js/better-simple-slideshow.js"></script>
+<!-- internal Javascript -->
+<script>
+var opts = {
+    auto : {
+        speed : 3500,
+        pauseOnHover : false
+    },
+    fullScreen : false,
+    swipe : true
+};
+makeBSS('.num1', opts);
+</script>
+</body>
+</html>

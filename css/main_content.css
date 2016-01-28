@@ -1,0 +1,75 @@
+/*universal selector*/
+*{margin:0;padding:0;}
+/*type selector*/
+body {
+  /*background color of the entire page*/
+  background: #111;
+  /*font*/
+  font-family: 'Open Sans', sans-serif;
+  /*color of text, white*/
+  color: #fff;
+  /*controls overflow on the x-axis (left/right) of the page
+    hidden: The content is clipped - and no scrolling mechanism is provided*/
+  overflow-x: hidden;
+}
+header{
+  /*absolute: positioned relative to the nearest positioned ancestor
+    in this case, positioned relative to body*/
+  position: absolute;
+  /*stack order, higher z-index will be brought to the front of the page*/
+  z-index: 9999;
+  width: 100%;
+  /*background color of the header element, black
+    .5 is used to make the element semi-transparent*/
+  background: rgba(0,0,0,.5);
+}
+h1, h2{
+  font-family: 'Open Sans Condensed', sans-serif;
+  /*controls the weight of the font
+    can make bold, light, normal, etc.*/
+  font-weight: 700;
+  margin: .8em 0 .2em 0;
+}
+h1{
+ margin: .2em .5em;
+ /*controls how the element is displayed
+  block: starts on a new line and takes entire of
+    width of container
+  inline: doesn't start on a new line and only takes
+    as much width as needed
+  inline-block: like inline element, but can control
+    width/height*/
+ display: inline-block;
+}
+header p{
+ display: inline-block;
+ font-size: .9em;
+}
+/*class selector*/
+.content{
+    margin: 1em 2em;
+}
+a{
+    color:#fff;
+}
+/*change the font-size and whether "A simple Javascript slideshow"
+  is displayed if the viewport is <= 830 pixels wide
+  viewport represent size of screen*/
+@media screen and (max-width: 830px){
+    h1{
+     font-size: 1.3em;
+    }
+    .desc{
+        display: none;
+    }
+}
+/*change ... if the viewport is <= 400 pixels wide*/
+@media screen and (max-width: 400px){
+    h1{
+     font-size: 1.1em;
+    }
+    /*another way of calling .desc*/
+    header span{
+        display: none;
+    }
+}
