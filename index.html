@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <!-- title appear at the top of the window/tab -->
         <title>A slideshow made with HTML5, CSS3, and JavaScript</title>
-        <!-- viewport is the screen -->
+        <!-- viewport is the screen/what is viewable -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- link font to HTML -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
@@ -43,29 +43,35 @@
 		      <img src="img/cityscape-at-night1.jpg" width="100%" />
             </figure>
         </div>
-<div class="content">
-<h2>History</h2>
+        
+      <div class="content">
+      <h2>History</h2>
 
-<p>Situated on a bend of the Mississippi River 100 miles from its mouth, New Orleans has
-  been the chief city of Louisiana and the Gulf of Mexico’s busiest northern port since the early 1700s.
-  Founded by the French, ruled for 40 years by the Spanish and bought by the United States in the
-  1803 Louisiana Purchase, New Orleans is known for its distinct Creole culture and vibrant history.
-  Significant battles of the War of 1812 and the Civil War were fought over the city.
-  In its last hundred years the key struggles of New Orleans have been social (poverty, racial strife) and
-  natural (hurricanes, floods and slowly sinking land).</p>
-<!-- link external Javascript to HTML -->
-<script src="js/better-simple-slideshow.js"></script>
-<!-- internal Javascript -->
-<script>
-var opts = {
-    auto : {
-        speed : 3500,
-        pauseOnHover : false
-    },
-    fullScreen : false,
-    swipe : true
-};
-makeBSS('.num1', opts);
-</script>
-</body>
+      <p>Situated on a bend of the Mississippi River 100 miles from its mouth, New Orleans has
+        been the chief city of Louisiana and the Gulf of Mexico’s busiest northern port since the early 1700s.
+        Founded by the French, ruled for 40 years by the Spanish and bought by the United States in the
+        1803 Louisiana Purchase, New Orleans is known for its distinct Creole culture and vibrant history.
+        Significant battles of the War of 1812 and the Civil War were fought over the city.
+        In its last hundred years the key struggles of New Orleans have been social (poverty, racial strife) and
+        natural (hurricanes, floods and slowly sinking land).</p>
+      <!-- link external Javascript to HTML -->
+      <script src="js/better-simple-slideshow.js"></script>
+      <!-- internal Javascript -->
+      <script>
+      // creation of an object called opts
+      var opts = {
+        // *note* object within an object
+          auto : {
+              speed : 3500,
+              pauseOnHover : false
+          },
+          fullScreen : false,
+          swipe : true
+      };
+      // calling a function with args
+      // .num1 - refers to the div of images
+      // and opts - refers to the object created above
+      makeBSS('.num1', opts);
+      </script>
+    </body>
 </html>

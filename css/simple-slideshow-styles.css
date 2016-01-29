@@ -3,6 +3,7 @@
 .bss-slides{
   position: relative;
   display: block;
+  overflow: hidden;
 }
 .bss-slides:focus{
  outline: 0;
